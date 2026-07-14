@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.14)
+project(CppConScenarios CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find or pull Google Benchmark
+find_package(benchmark REQUIRED)
+
+add_executable(aos_soa_bench aos_soa_benchmark.cpp)
+target_link_libraries(aos_soa_bench benchmark::benchmark)
